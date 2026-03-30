@@ -1,0 +1,29 @@
+/* Estrutura geral para manter o footer fixo embaixo */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* O conteúdo principal cresce e empurra o footer para baixo */
+main {
+    flex: 1;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #1f2937; /* bg-gray-800 */
+    color: #d1d5db; /* text-gray-300 */
+    text-align: center;
+    padding: 1rem;
+}
+
+/* a {
+    color: antiquewhite!important;
+} */
