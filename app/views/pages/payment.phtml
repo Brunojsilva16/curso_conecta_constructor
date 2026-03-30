@@ -1,0 +1,57 @@
+<div class="min-h-screen bg-slate-100">
+    <div class="mx-auto flex min-h-screen max-w-2xl items-center justify-center px-4 py-10">
+        <div class="w-full overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-slate-200">
+            <div class="border-b border-slate-200 bg-slate-50 px-6 py-5 sm:px-8">
+                <h1 class="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                    Finalizar compra
+                </h1>
+                <p class="mt-2 text-sm leading-6 text-slate-600 sm:text-base">
+                    Você será redirecionado para o ambiente seguro do PagBank para concluir o pagamento.
+                </p>
+            </div>
+
+            <div class="px-6 py-6 sm:px-8 sm:py-8">
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                    <p class="text-sm font-medium uppercase tracking-wide text-slate-500">
+                        Curso selecionado
+                    </p>
+
+                    <h2 class="mt-2 text-2xl font-semibold text-slate-900">
+                        <?= htmlspecialchars($courseTitle ?? 'Curso') ?>
+                    </h2>
+
+                    <div class="mt-6">
+                        <p class="text-sm text-slate-500">Valor do investimento</p>
+                        <div class="mt-1 text-4xl font-extrabold tracking-tight text-slate-900 sm:text-5xl">
+                            R$ <?= htmlspecialchars($coursePrice ?? '0,00') ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 rounded-xl border border-amber-200 bg-amber-50 p-4">
+                    <p class="text-sm leading-6 text-amber-800">
+                        Após clicar no botão abaixo, uma nova guia será aberta com a página oficial do PagBank.
+                    </p>
+                </div>
+
+                <div class="mt-8">
+                    <a
+                        href="<?= htmlspecialchars($checkoutUrl ?? '#') ?>"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex w-full items-center justify-center rounded-xl bg-indigo-600 px-6 py-4 text-base font-semibold text-white shadow-md transition hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-300">
+                        Ir para pagamento no PagBank
+                    </a>
+                </div>
+
+                <div class="mt-4 text-center">
+                    <a
+                        href="<?= BASE_URL ?>/"
+                        class="text-sm font-medium text-slate-600 transition hover:text-slate-900">
+                        Voltar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
